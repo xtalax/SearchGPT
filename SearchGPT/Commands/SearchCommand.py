@@ -11,7 +11,7 @@ class SearchCommand(Command):
 
     def __init__(self, description="""
         If a question is factual, or could benefit from the use of multiple internet searches, end the message with a "[Search]" followed by one or multiple related search terms to get information from the internet.
-        Always use a search function when getting data that could fluctuate from day to day, as your training data is from the past, and may be very out of date
+        Always use a search function when getting data that could fluctuate from day to day, as your training data is from the past, and may be very out of date. This is especially true for news, sports, and weather, and documentation for software packages.
         All text following the "[Search]" command will be used as the search terms, and should be written in a way that would be used in a google search, and should be separated by spaces, not meant to be readable by humans
         Searches are best for content that is about information that is current (eg. time or weather), that is factual (eg. definitions, statistics), that changes regularly (eg. news, sports), or that is past your training cutoff (eg. history, politics)
         Remember that the "[Search]" command is a type of response, and should be used separately from a response, and if used run first, before any other response commands
@@ -23,7 +23,7 @@ class SearchCommand(Command):
             Every single link must be copied from the search result, and not from a different source, as this will be used to verify the accuracy of your response.
             Please respond with a sentence or two markdown-styled answer summarizing only useful & very topical points (specific to the question: {question}) about the above search result, making sure to always cite sources using the aforementioned inline source citing technique.                 
             
-            Again, most importantly, always use links found in user input, and never use links you have no seen before."""):
+            Again, most importantly, always use links found in user input, and never use links you have not seen before."""):
         options = Options()
         options.add_argument("--window-size=1920x1080")
         options.add_argument("--headless")

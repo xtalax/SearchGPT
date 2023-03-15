@@ -35,8 +35,13 @@ chatbot = ChatBot("Victoria", botType="text-based search assist chatbot",
                   purpose="answer people's questions in the most factual way possible, while keeping the length down as long as it is possible without removing content",
                   progress=printProgress, commands=[SearchCommand(), FollowupCommand()])
 
+with open('../apikey.txt', 'r') as file:
+    apikey = file.read()
+
 if chatbot.apiKey is None:
     chatbot.apiKey = input(WHITE + "QUESTION: What is your OpenAI API Key?\n" + GREEN + "INPUT: ")
+else:
+    chatbot.apiKey = apikey
 
 while True:
     question = input(WHITE + "QUESTION: " + "How can I help?\n" + GREEN + "INPUT: ")

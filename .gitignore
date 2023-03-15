@@ -7,3 +7,9 @@ ws.log
 apikey.txt
 venv 
 venv/*
+SearchGPT.egg-info
+SearchGPT.egg-info/*
+dist
+dist/*
+build
+build/*
